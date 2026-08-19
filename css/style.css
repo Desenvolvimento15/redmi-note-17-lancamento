@@ -158,7 +158,7 @@
 }
 
 .rn17-titan__title {
-    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    font-size: clamp(1.4rem, 3.5vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.01em;
     margin: 0;
@@ -287,7 +287,7 @@
 }
 
 .rn17-section-title {
-    font-size: clamp(1.4rem, 2.6vw, 2.3rem);
+    font-size: clamp(1.4rem, 2.6vw, 3.3rem);
     margin: 0 0 10px 0;
     font-weight: 700;
     text-align: center;
@@ -588,7 +588,7 @@
 }
 
 .rn17-exclusive__card p {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.4;
     margin: 0;
@@ -743,7 +743,7 @@
         transform: none;
         max-width: 100%;
         text-align: center;
-        padding: 0 20px;
+        padding: 0 27px;
         box-sizing: border-box;
         z-index: 2;
         margin-bottom: 0;
@@ -810,14 +810,14 @@
     }
 
     .rn17-flagship .rn17-section-title {
-        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        font-size: clamp(2rem, 4.2vw, 1.45rem);
         line-height: 1.3;
         padding: 0 16px;
         margin-bottom: 8px;
     }
 
     .rn17-flagship .rn17-section-subtitle {
-        font-size: 0.88rem;
+        font-size: 1.3rem;
         padding: 0 20px;
         margin-bottom: 24px;
         line-height: 1.45;
@@ -868,12 +868,12 @@
     }
 
     .rn17-design .rn17-section-title {
-        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        font-size: clamp(2rem, 4.2vw, 1.45rem);
         line-height: 1.3;
     }
 
     .rn17-design .rn17-section-subtitle {
-        font-size: 0.88rem;
+        font-size: 1.3rem;
         line-height: 1.55;
     }
 
@@ -910,7 +910,7 @@
     }
 
     .rn17-exclusive .rn17-section-title {
-        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        font-size: clamp(2rem, 4.2vw, 1.45rem);
         line-height: 1.35;
         padding: 0 10px;
     }
@@ -981,7 +981,7 @@
 
     .rn17-titan__title,
     .rn17-section-title {
-        font-size: 1.25rem;
+        font-size: 2rem;
     }
 
     .rn17-section-subtitle {
@@ -1015,7 +1015,7 @@
     }
 
     .rn17-exclusive__card p {
-        font-size: clamp(0.92rem, 3.5vw, 1.05rem);
+        font-size: clamp(0.92rem, 5.5vw, 1.2rem);
     }
 
     .rn17-exclusive__icon {
