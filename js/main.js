@@ -37,6 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
             let isPlaying = true;
             let autoPlayInterval = null;
             let isTransitioning = false;
+            const subtitleEl = document.getElementById('rn17-slider-subtitle');
+            let subtitleTimeout = null;
+
+            function updateSubtitle(index, withTransition = true) {
+                if (!subtitleEl) return;
+                const realIndex = (index - 1 + count) % count;
+                const slide = originalSlides[realIndex];
+                if (!slide) return;
+                const newSubtitle = slide.getAttribute('data-subtitle');
+                if (!newSubtitle) return;
+
+                if (withTransition) {
+                    clearTimeout(subtitleTimeout);
+                    subtitleEl.style.opacity = '0';
+                    subtitleTimeout = setTimeout(() => {
+                        subtitleEl.innerHTML = newSubtitle;
+                        subtitleEl.style.opacity = '1';
+                    }, 200);
+                } else {
+                    subtitleEl.innerHTML = newSubtitle;
+                    subtitleEl.style.opacity = '1';
+                }
+            }
 
             function getSlideMetrics() {
                 const slide = allSlides[0];
@@ -66,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         s.classList.remove('active');
                     }
                 });
+
+                updateSubtitle(index, withTransition);
             }
 
             function nextSlide() {

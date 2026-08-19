@@ -307,6 +307,11 @@
     padding: 0 20px;
     line-height: 1.5;
     text-align: center;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
 }
 
 .rn17-slider-wrapper {
