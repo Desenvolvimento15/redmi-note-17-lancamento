@@ -1,0 +1,1073 @@
+/* ==========================================================================
+   REDMI NOTE 17 SERIES - LANDING PAGE (LINX READY)
+   Arquivo Único de Estilos (Reset + Design System + Responsividade)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. RESET ESCOPADO (Protegido contra conflitos com a plataforma Linx)
+   -------------------------------------------------------------------------- */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.rn17-lp img,
+.rn17-lp picture,
+.rn17-lp video,
+.rn17-lp canvas,
+.rn17-lp svg {
+    display: block;
+    max-width: 100%;
+}
+
+.rn17-lp input,
+.rn17-lp button,
+.rn17-lp textarea,
+.rn17-lp select {
+    font: inherit;
+}
+
+.rn17-lp p,
+.rn17-lp h1,
+.rn17-lp h2,
+.rn17-lp h3,
+.rn17-lp h4,
+.rn17-lp h5,
+.rn17-lp h6 {
+    overflow-wrap: break-word;
+}
+
+.rn17-lp a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rn17-lp ul,
+.rn17-lp ol {
+    list-style: none;
+}
+
+.rn17-lp button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   1. DESIGN SYSTEM E CONTAINER PRINCIPAL
+   -------------------------------------------------------------------------- */
+.rn17-lp {
+    --rn17-bg: #000000;
+    --rn17-orange: #ff7a00;
+    --rn17-orange-light: #ff9d3f;
+    --rn17-gold: #dca55d;
+    --rn17-text-primary: #ffffff;
+    --rn17-text-secondary: #cfcfcf;
+    --rn17-text-muted: #ffffff;
+    --rn17-card-dark: #120504;
+    --rn17-card-border: rgba(255, 102, 0, 0.35);
+    --rn17-font: 'MiSans Latin', 'MiSans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+    background-color: var(--rn17-bg);
+    color: var(--rn17-text-primary);
+    font-family: var(--rn17-font);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO
+   -------------------------------------------------------------------------- */
+.rn17-hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: var(--rn17-bg);
+}
+
+.rn17-hero__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: clamp(30px, 4vw, 60px);
+    text-align: center;
+    pointer-events: none;
+}
+
+.rn17-hero__slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rn17-hero__slogan picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rn17-hero__slogan img {
+    width: clamp(280px, 32vw, 520px);
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.rn17-hero__bg {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.rn17-hero__bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   3. TÍTULO TITAN
+   -------------------------------------------------------------------------- */
+.rn17-titan {
+    padding: 70px 20px 40px;
+    text-align: center;
+}
+
+.rn17-titan__title {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(239, 84, 0), rgb(252, 219, 98));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   4. CARD TÜV
+   -------------------------------------------------------------------------- */
+.rn17-tuv {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.rn17-tuv__card {
+    max-width: 82rem;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rn17-tuv__content {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    max-width: 46%;
+    z-index: 2;
+}
+
+.rn17-tuv__title {
+    font-size: clamp(1.2rem, 2vw, 1.9rem);
+    font-weight: 700;
+    margin: 0 0 14px 0;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.rn17-tuv__text {
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    line-height: 1.55;
+    color: var(--rn17-text-secondary);
+    margin: 0;
+}
+
+.rn17-tuv__card picture,
+.rn17-tuv__card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   5. BENEFÍCIOS
+   -------------------------------------------------------------------------- */
+.rn17-benefits {
+    padding: 30px 20px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.rn17-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.rn17-benefits__card {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.rn17-benefits__text {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.35;
+    z-index: 2;
+    padding: 0 16px;
+    margin: 0;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.rn17-benefits__card picture,
+.rn17-benefits__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.rn17-benefits__card:hover img {
+    transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   6. EXPERIÊNCIA FLAGSHIP (Slider)
+   -------------------------------------------------------------------------- */
+.rn17-flagship {
+    padding: 70px 0;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.rn17-section-title {
+    font-size: clamp(1.4rem, 2.6vw, 2.3rem);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20px;
+    background-image: linear-gradient(to right, rgb(239, 84, 0), rgb(252, 219, 98));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.rn17-section-subtitle {
+    font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+    color: var(--rn17-text-secondary);
+    margin: 0 auto 36px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.rn17-slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.rn17-slider-track {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    width: max-content;
+    transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+    cursor: grab;
+    user-select: none;
+}
+
+.rn17-slider-track:active {
+    cursor: grabbing;
+}
+
+.rn17-slide {
+    flex-shrink: 0;
+    width: min(880px, 62vw);
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0.85;
+}
+
+.rn17-slide.active {
+    opacity: 1;
+}
+
+.rn17-slide picture,
+.rn17-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rn17-slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 28px;
+    background: rgba(255, 254, 254);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 8px 24px;
+    border-radius: 30px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255, 255, 255);
+}
+
+.rn17-slider-btn {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: background 0.2s, transform 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.rn17-slider-btn:hover {
+    background: rgba(255, 255, 255);
+    transform: scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   7. EVOLUÇÃO DE DESIGN
+   -------------------------------------------------------------------------- */
+.rn17-design {
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   8. VÍDEO DO PRODUTO
+   -------------------------------------------------------------------------- */
+.rn17-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 70px;
+}
+
+.rn17-video__thumbnail-box {
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+
+.rn17-video__thumbnail-box picture,
+.rn17-video__thumbnail-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.rn17-video__thumbnail-box:hover .rn17-video__thumbnail-img {
+    opacity: 0.85;
+}
+
+.rn17-video__play-overlay {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 54px;
+    height: 54px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.rn17-video__thumbnail-box:hover .rn17-video__play-overlay {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.08);
+}
+
+.rn17-video__watch-btn {
+    margin-top: 24px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.rn17-video__watch-btn:hover {
+    color: var(--rn17-orange-light);
+}
+
+/* --------------------------------------------------------------------------
+   9. MODAL DE VÍDEO
+   -------------------------------------------------------------------------- */
+.rn17-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.rn17-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rn17-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.rn17-modal__content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 100000;
+}
+
+.rn17-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+    z-index: 100001;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.rn17-modal__content video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   10. BENEFÍCIOS EXCLUSIVOS
+   -------------------------------------------------------------------------- */
+.rn17-exclusive {
+    padding: 60px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rn17-text-center {
+    text-align: center;
+}
+
+.rn17-exclusive__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 36px;
+}
+
+.rn17-exclusive__card {
+    background: linear-gradient(#000 22%, #470c04 100%);
+    border: 1px solid rgba(255, 102, 0, 0.35);
+    border-radius: 16px;
+    padding: 36px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 32px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 24px rgba(255, 102, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.rn17-exclusive__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 120, 0, 0.55);
+}
+
+.rn17-exclusive__card picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rn17-exclusive__card p {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    color: #ffffff;
+}
+
+.rn17-exclusive__icon {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   11. DISCLAIMER FINAL
+   -------------------------------------------------------------------------- */
+.rn17-disclaimer {
+    padding: 40px 20px 60px;
+    background-color: #000;
+}
+
+.rn17-disclaimer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    color: var(--rn17-text-muted);
+    text-align: center;
+    line-height: 1.55;
+}
+
+/* ==========================================================================
+   12. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* ---- 1200px — Notebook / Small Desktop ---- */
+@media (max-width: 1200px) {
+
+    .rn17-benefits__grid,
+    .rn17-exclusive__grid {
+        gap: 16px;
+    }
+}
+
+/* ---- 1024px — Tablet Landscape ---- */
+@media (max-width: 1024px) {
+
+    .rn17-benefits__grid,
+    .rn17-exclusive__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .rn17-tuv__content {
+        max-width: 52%;
+        left: 6%;
+    }
+
+    .rn17-slide {
+        width: min(720px, 70vw);
+        height: 400px;
+    }
+}
+
+/* ---- 768px — Tablet Portrait / Mobile ---- */
+@media (max-width: 768px) {
+
+    /* 1. HERO */
+    .rn17-hero {
+        min-height: auto;
+        justify-content: flex-start;
+    }
+
+    .rn17-hero__content {
+        padding-top: clamp(20px, 4.5vw, 36px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .rn17-hero__slogan {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rn17-hero__slogan picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rn17-hero__slogan img {
+        width: 76%;
+        max-width: 320px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 2. TÍTULO TITAN */
+    .rn17-titan {
+        padding: 48px 16px 24px;
+        text-align: center;
+    }
+
+    .rn17-titan__title {
+        font-size: clamp(1.2rem, 4.2vw, 1.55rem);
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    /* 3. CARD TÜV */
+    .rn17-tuv {
+        padding: 0 16px 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rn17-tuv__card {
+        position: relative;
+        width: 100%;
+        max-width: 440px;
+        border-radius: 16px;
+        overflow: hidden;
+        display: block;
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .rn17-tuv__card picture,
+    .rn17-tuv__card picture img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+    }
+
+    .rn17-tuv__content {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        transform: none;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 2;
+        margin-bottom: 0;
+    }
+
+    .rn17-tuv__title {
+        font-size: clamp(1.15rem, 3.8vw, 1.35rem);
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1.3;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .rn17-tuv__text {
+        font-size: clamp(0.78rem, 2.4vw, 0.88rem);
+        line-height: 1.5;
+        color: var(--rn17-text-secondary);
+        max-width: 320px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* 4. BENEFÍCIOS */
+    .rn17-benefits {
+        padding: 10px 43px 36px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rn17-benefits__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .rn17-benefits__card {
+        border-radius: 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: none;
+    }
+
+    .rn17-benefits__card picture,
+    .rn17-benefits__card img {
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .rn17-benefits__text {
+        font-size: clamp(1.1rem, 3.8vw, 1.35rem);
+        font-weight: 700;
+        top: 10%;
+        padding: 0 16px;
+        line-height: 1.3;
+    }
+
+    /* 5. FLAGSHIP SLIDER */
+    .rn17-flagship {
+        padding: 44px 0 28px;
+    }
+
+    .rn17-flagship .rn17-section-title {
+        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        line-height: 1.3;
+        padding: 0 16px;
+        margin-bottom: 8px;
+    }
+
+    .rn17-flagship .rn17-section-subtitle {
+        font-size: 0.88rem;
+        padding: 0 20px;
+        margin-bottom: 24px;
+        line-height: 1.45;
+    }
+
+    .rn17-slider-wrapper {
+        padding: 0;
+    }
+
+    .rn17-slider-track {
+        gap: 14px;
+    }
+
+    .rn17-slide {
+        width: 78vw;
+        max-width: 360px;
+        height: clamp(500px, 128vw, 560px);
+        border-radius: 0;
+        opacity: 0.95;
+    }
+
+    .rn17-slide.active {
+        opacity: 1;
+    }
+
+    .rn17-slide picture,
+    .rn17-slide img {
+        border-radius: 0;
+        object-fit: cover;
+    }
+
+    .rn17-slider-controls {
+        margin-top: 22px;
+        gap: 18px;
+        padding: 6px 20px;
+        background: #ffffff;
+    }
+
+    .rn17-slider-btn {
+        width: 32px;
+        height: 32px;
+        color: #000000;
+    }
+
+    /* 6. EVOLUÇÃO DE DESIGN */
+    .rn17-design {
+        padding: 40px 16px 24px;
+    }
+
+    .rn17-design .rn17-section-title {
+        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        line-height: 1.3;
+    }
+
+    .rn17-design .rn17-section-subtitle {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    /* 7. VÍDEO DO PRODUTO */
+    .rn17-video {
+        padding: 0 16px 50px;
+    }
+
+    .rn17-video__thumbnail-box {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .rn17-video__play-overlay {
+        bottom: 12px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .rn17-video__play-overlay svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .rn17-video__watch-btn {
+        font-size: 1rem;
+        margin-top: 18px;
+    }
+
+    /* 8. BENEFÍCIOS EXCLUSIVOS */
+    .rn17-exclusive {
+        padding: 22px 43px 50px;
+    }
+
+    .rn17-exclusive .rn17-section-title {
+        font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+        line-height: 1.35;
+        padding: 0 10px;
+    }
+
+    .rn17-exclusive__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-top: 28px;
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .rn17-exclusive__card {
+        background: linear-gradient(#000 22%, #470c04 100%);
+        border: 1px solid rgb(255, 102, 0);
+        border-radius: 16px;
+        padding: clamp(24px, 6vw, 36px) 20px;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        max-width: 440px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(22px, 5.5vw, 36px);
+        text-align: center;
+        box-shadow: inset 0 0 20px rgba(255, 102, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .rn17-exclusive__card p {
+        font-size: clamp(1.02rem, 3.6vw, 1.15rem);
+        font-weight: 700;
+        line-height: 1.35;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    .rn17-exclusive__icon {
+        width: clamp(64px, 17vw, 76px);
+        height: auto;
+    }
+
+    /* 9. DISCLAIMER */
+    .rn17-disclaimer {
+        padding: 28px 16px 50px;
+    }
+
+    .rn17-disclaimer__content {
+        font-size: 0.68rem;
+        text-align: left;
+        line-height: 1.55;
+    }
+}
+
+/* ---- 480px — Mobile Small ---- */
+@media (max-width: 480px) {
+    .rn17-hero__content {
+        padding-top: clamp(18px, 5vw, 28px);
+    }
+
+    .rn17-hero__slogan img {
+        width: 80%;
+        max-width: 280px;
+    }
+
+    .rn17-titan__title,
+    .rn17-section-title {
+        font-size: 1.25rem;
+    }
+
+    .rn17-section-subtitle {
+        font-size: 0.82rem;
+    }
+
+    .rn17-tuv__title {
+        font-size: 1.2rem;
+    }
+
+    .rn17-tuv__text {
+        font-size: 0.8rem;
+    }
+
+    .rn17-benefits__text {
+        font-size: 1.1rem;
+        top: 9%;
+    }
+
+    .rn17-slide {
+        width: 78vw;
+        max-width: 340px;
+        height: clamp(480px, 126vw, 540px);
+        border-radius: 0;
+    }
+
+    .rn17-exclusive__card {
+        aspect-ratio: 1 / 1;
+        padding: clamp(20px, 5vw, 30px) 16px;
+        gap: clamp(18px, 4.5vw, 28px);
+    }
+
+    .rn17-exclusive__card p {
+        font-size: clamp(0.92rem, 3.5vw, 1.05rem);
+    }
+
+    .rn17-exclusive__icon {
+        width: clamp(58px, 15vw, 68px);
+        height: auto;
+    }
+}
+
+/* ---- 375px — Mobile Extra Small ---- */
+@media (max-width: 375px) {
+    .rn17-hero__content {
+        padding-top: clamp(14px, 4.5vw, 22px);
+    }
+
+    .rn17-hero__slogan img {
+        width: 82%;
+        max-width: 250px;
+    }
+
+    .rn17-titan__title,
+    .rn17-section-title {
+        font-size: 1.15rem;
+    }
+
+    .rn17-tuv__title {
+        font-size: 1.1rem;
+    }
+
+    .rn17-benefits__text {
+        font-size: 0.98rem;
+        top: 8%;
+    }
+
+    .rn17-slide {
+        width: 78vw;
+        max-width: 310px;
+        height: clamp(440px, 126vw, 490px);
+        border-radius: 0;
+    }
+
+    .rn17-exclusive__card {
+        aspect-ratio: 1 / 1;
+        padding: 18px 14px;
+        gap: 16px;
+    }
+
+    .rn17-exclusive__card p {
+        font-size: 0.88rem;
+    }
+
+    .rn17-exclusive__icon {
+        width: 52px;
+        height: 52px;
+    }
+}
